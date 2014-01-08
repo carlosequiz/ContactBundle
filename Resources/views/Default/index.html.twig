@@ -1,12 +1,12 @@
 {% extends 'FluzoContactBundle::layout.html.twig' %}
-{% block description %}{{'Use this form for contact with Fluzo.info and I will answer as soon as possible'|trans}}{% endblock %}
-{% block title %}{{'Contact'|trans}} | Fluzo.info{% endblock %}
+{% block description %}{{'Use this form for contact me and I will answer as soon as possible'|trans}}{% endblock %}
+{% block title %}{{'Contact'|trans}}{% endblock %}
 
 {% block body %}
 <h2 class="text-info">{{'Contact'|trans}}</h2> 
 <div class="col-lg-12 col-xs-12 pull-left well">
 
-{{ form_start(form, {'method': 'POST', 'attr': {'role': 'form', 'class': 'form-horizontal', 'novalidate':'novalidate'} }) }}
+{{ form_start(form, {'method': 'POST', 'attr': {'role': 'form', 'class': 'form-horizontal'} }) }}
     {{ form_errors(form) }}
     <div class="form-group col-lg-8 col-xs-12">
         {{ form_label(form.name) }} 

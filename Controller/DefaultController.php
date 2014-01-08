@@ -21,11 +21,11 @@ class DefaultController extends Controller
         if ($form->isValid())
         {
             $data = $form->getData();
-
+            $from_to=$this->container->getParameter('fluzo_contact_email');
             $message = \Swift_Message::newInstance()
-                    ->setSubject($data->getSubject())
-                    ->setFrom('fluzo.info@gmail.com')
-                    ->setTo('fluzo.info@gmail.com')
+                    ->setSubject($data->getSubject())                 
+                    ->setFrom($data->getEmail())
+                    ->setTo($from_to)  
                     ->setBody($data->getName().'<br />'.$data->getEmail().'<br >'.$data->getMessage(),'text/html'
                     /* $this->renderView('HelloBundle:Hello:email.txt.twig', array('name' => $name)) */
             );
