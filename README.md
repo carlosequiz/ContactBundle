@@ -7,7 +7,13 @@ Bundle for Symfony 2.3 with a typical contact form for your website.
 
 Translate to English and Spanish.
 
+Documentation is [here](http://fluzo.info)
+
 ## Installation
+```Bash
+$ composer require fluzo/contact-bundle:dev-master
+```
+
 ```php
 # /app/AppKernel.php
 public function registerBundles()
@@ -30,6 +36,8 @@ fluzo_contact:
 ```yaml
 # /app/config/config.yml
 translator:      { fallback: %locale% }
+parameters:
+    fluzo_contact_email: your@email
 ```
 
 ```HTML
@@ -44,3 +52,5 @@ translator:      { fallback: %locale% }
 should extend base.html.twig or another template that extends from this -->
 <a href="{{path('fluzo_contact_homepage_'~(locale))}}">{{'Contact'|trans}}</a>
 ```
+
+
