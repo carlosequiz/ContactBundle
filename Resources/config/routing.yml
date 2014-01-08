@@ -1,0 +1,19 @@
+fluzo_contact_homepage_es:
+    pattern:  /{_locale}/contacto
+    defaults: { _controller: FluzoContactBundle:Default:index, _locale: es }    
+    requirements:
+        _locale: es     
+
+fluzo_contact_homepage_en:
+    pattern:  /{_locale}/contact
+    defaults: { _controller: FluzoContactBundle:Default:index, _locale: en }  
+    requirements:
+        _locale: en      
+
+fluzo_contact_submit:
+    pattern: /{_locale}/contactok
+    defaults: { _controller: FluzoContactBundle:Default:submit }  
+    requirements:
+        _locale: es|en      
+    
+    

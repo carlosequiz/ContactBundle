@@ -1,0 +1,7 @@
+parameters:
+#    fluzo_contact.example.class: Fluzo\ContactBundle\Example
+
+services:
+#    fluzo_contact.example:
+#        class: %fluzo_contact.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
