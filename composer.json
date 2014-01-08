@@ -1,0 +1,22 @@
+{
+    "name": "fluzo/contact-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle for Symfony 2.3 with a typical contact form for your website",
+    "keywords": ["Symfony", "contact", "bundle"],
+    "homepage": "https://github.com/fluzo/ContactBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fluzo.info",
+            "email": "fluzo.info@gmail.com",
+            "homepage": "http://fluzo.info"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.4"
+    },
+    "autoload": {
+        "psr-0": { "Fluzo\\ContactBundle": "" }
+    },
+    "target-dir": "Fluzo/ContactBundle"
+}
