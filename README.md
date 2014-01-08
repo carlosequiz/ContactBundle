@@ -3,7 +3,9 @@ ContactBundle
 
 Beta !!!
 
-Bundle for Symfony 2.3 with a typical contact form for your website
+Bundle for Symfony 2.3 with a typical contact form for your website.
+
+Translate to English and Spanish.
 
 ## Installation
 ```php
@@ -22,6 +24,7 @@ public function registerBundles()
 # /app/config/routing.yml
 fluzo_contact:
     resource: "@FluzoContactBundle/Resources/config/routing.yml"
+    prefix:   /
 ```
 
 ```yaml
@@ -34,4 +37,10 @@ translator:      { fallback: %locale% }
 <!DOCTYPE html>
 {% set locale=app.request.locale %} 
 <!-- ... -->
+```
+
+```HTML
+<!-- In your twig template, link to contact form, 
+should extend base.html.twig or another template that extends from this -->
+<a href="{{path('fluzo_contact_homepage_'~(locale))}}">{{'Contact'|trans}}</a>
 ```
